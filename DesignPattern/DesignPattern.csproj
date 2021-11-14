@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractFactoryPattern.cs" />
+    <Compile Include="AdapterPattern.cs" />
+    <Compile Include="Bridge.cs" />
+    <Compile Include="BuilderPattern.cs" />
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrototypePattern.cs" />
     <Compile Include="SingletonPattern.cs" />
   </ItemGroup>
   <ItemGroup>
