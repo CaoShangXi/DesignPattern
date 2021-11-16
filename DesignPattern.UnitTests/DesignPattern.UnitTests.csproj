@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FactoryPatternTest.cs" />
+    <Compile Include="FilterPatternTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AbstractFactoryPatternTest.cs" />
     <Compile Include="SingletonPatternTest.cs" />
