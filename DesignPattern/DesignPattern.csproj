@@ -52,6 +52,9 @@
     <Compile Include="AdapterPattern.cs" />
     <Compile Include="Bridge.cs" />
     <Compile Include="BuilderPattern.cs" />
+    <Compile Include="CompositePattern.cs" />
+    <Compile Include="DecoratorPattern.cs" />
+    <Compile Include="FacadePattern.cs" />
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="FilterPattern.cs" />
     <Compile Include="Program.cs" />

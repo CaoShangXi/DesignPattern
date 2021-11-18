@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecoratorPatternTest.cs" />
     <Compile Include="FactoryPatternTest.cs" />
     <Compile Include="FilterPatternTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +59,8 @@
     <Compile Include="PrototypePatternTest.cs" />
     <Compile Include="AdapterPatternTest.cs" />
     <Compile Include="BridgePatternTest.cs" />
+    <Compile Include="CompositePatternTest.cs" />
+    <Compile Include="FacadePatternTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
