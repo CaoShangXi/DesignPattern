@@ -57,9 +57,11 @@
     <Compile Include="FacadePattern.cs" />
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="FilterPattern.cs" />
+    <Compile Include="FlyweightPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototypePattern.cs" />
+    <Compile Include="ProxyPattern.cs" />
     <Compile Include="SingletonPattern.cs" />
   </ItemGroup>
   <ItemGroup>

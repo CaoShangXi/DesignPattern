@@ -61,6 +61,8 @@
     <Compile Include="BridgePatternTest.cs" />
     <Compile Include="CompositePatternTest.cs" />
     <Compile Include="FacadePatternTest.cs" />
+    <Compile Include="FlyweightPatternTest.cs" />
+    <Compile Include="ProxyPatternTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

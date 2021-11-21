@@ -16,21 +16,21 @@ namespace DesignPattern.FacadePattern
     {
         public void Draw()
         {
-            Console.WriteLine("Rectangle::Draw()");
+            Console.WriteLine("Rectangle:Draw()");
         }
     }
     public class Square : IShape
     {
         public void Draw()
         {
-            Console.WriteLine("Square::Draw()");
+            Console.WriteLine("Square:Draw()");
         }
     }
     public class Circle : IShape
     {
         public void Draw()
         {
-            Console.WriteLine("Circle::Draw()");
+            Console.WriteLine("Circle:Draw()");
         }
     }
 
