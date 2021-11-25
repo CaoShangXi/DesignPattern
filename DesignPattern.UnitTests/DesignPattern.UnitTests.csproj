@@ -64,6 +64,7 @@
     <Compile Include="FlyweightPatternTest.cs" />
     <Compile Include="ProxyPatternTest.cs" />
     <Compile Include="ChainPatternTest.cs" />
+    <Compile Include="CommandPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
