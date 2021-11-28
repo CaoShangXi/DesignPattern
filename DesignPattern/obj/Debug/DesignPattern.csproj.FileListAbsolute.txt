@@ -5,3 +5,10 @@ C:\Users\cao\source\repos\DesignPattern\DesignPattern\obj\Debug\DesignPattern.cs
 C:\Users\cao\source\repos\DesignPattern\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
 C:\Users\cao\source\repos\DesignPattern\DesignPattern\obj\Debug\DesignPattern.exe
 C:\Users\cao\source\repos\DesignPattern\DesignPattern\obj\Debug\DesignPattern.pdb
+D:\Applications\repo\DesignPattern\DesignPattern\bin\Debug\DesignPattern.exe.config
+D:\Applications\repo\DesignPattern\DesignPattern\bin\Debug\DesignPattern.exe
+D:\Applications\repo\DesignPattern\DesignPattern\bin\Debug\DesignPattern.pdb
+D:\Applications\repo\DesignPattern\DesignPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+D:\Applications\repo\DesignPattern\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+D:\Applications\repo\DesignPattern\DesignPattern\obj\Debug\DesignPattern.exe
+D:\Applications\repo\DesignPattern\DesignPattern\obj\Debug\DesignPattern.pdb
