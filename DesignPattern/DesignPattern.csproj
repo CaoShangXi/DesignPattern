@@ -60,6 +60,7 @@
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="FilterPattern.cs" />
     <Compile Include="FlyweightPattern.cs" />
+    <Compile Include="IteratorPattern.cs" />
     <Compile Include="InterpreterPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

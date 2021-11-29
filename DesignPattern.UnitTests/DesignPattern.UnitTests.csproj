@@ -53,6 +53,7 @@
     <Compile Include="FactoryPatternTest.cs" />
     <Compile Include="FilterPatternTest.cs" />
     <Compile Include="InterpreterPatternTest.cs" />
+    <Compile Include="IteratorPatternTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AbstractFactoryPatternTest.cs" />
     <Compile Include="SingletonPatternTest.cs" />
