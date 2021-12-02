@@ -64,6 +64,7 @@
     <Compile Include="InterpreterPattern.cs" />
     <Compile Include="MediatorPattern.cs" />
     <Compile Include="MenmetoPattern.cs" />
+    <Compile Include="ObserverPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototypePattern.cs" />
