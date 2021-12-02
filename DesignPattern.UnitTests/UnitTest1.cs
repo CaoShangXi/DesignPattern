@@ -16,6 +16,7 @@ using DesignPattern.ObserverPattern;
 using DesignPattern.PrototypePattern;
 using DesignPattern.ProxyPattern;
 using DesignPattern.SingletonPattern;
+using DesignPattern.StatePattern;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -481,6 +482,25 @@ namespace DesignPattern.UnitTests
             subject.SetState(15);
             Console.WriteLine("Second state change: 10");
             subject.SetState(10);
+        }
+
+        /// <summary>
+        /// 状态模式测试
+        /// </summary>
+        [TestMethod]
+        public void StatePatternTest()
+        {
+            Context context = new Context();
+
+            StartState startState = new StartState();
+            startState.DoAction(context);
+
+            Console.WriteLine(context.GetState().ToString());
+
+            StopState stopState = new StopState();
+            stopState.DoAction(context);
+
+            Console.WriteLine(context.GetState().ToString());
         }
     }
 }
