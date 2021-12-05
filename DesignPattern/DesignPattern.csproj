@@ -64,6 +64,7 @@
     <Compile Include="InterpreterPattern.cs" />
     <Compile Include="MediatorPattern.cs" />
     <Compile Include="MenmetoPattern.cs" />
+    <Compile Include="NullObjectPattern.cs" />
     <Compile Include="ObserverPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +72,8 @@
     <Compile Include="ProxyPattern.cs" />
     <Compile Include="SingletonPattern.cs" />
     <Compile Include="StatePattern.cs" />
+    <Compile Include="StrategyPattern.cs" />
+    <Compile Include="TemplatePattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

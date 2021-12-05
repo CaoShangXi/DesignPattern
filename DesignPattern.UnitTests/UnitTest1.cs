@@ -12,11 +12,14 @@ using DesignPattern.InterpreterPattern;
 using DesignPattern.IteratorPattern;
 using DesignPattern.MediatorPattern;
 using DesignPattern.MenmetoPattern;
+using DesignPattern.NullObjectPattern;
 using DesignPattern.ObserverPattern;
 using DesignPattern.PrototypePattern;
 using DesignPattern.ProxyPattern;
 using DesignPattern.SingletonPattern;
 using DesignPattern.StatePattern;
+using DesignPattern.StrategyPattern;
+using DesignPattern.TemplatePattern;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -490,7 +493,7 @@ namespace DesignPattern.UnitTests
         [TestMethod]
         public void StatePatternTest()
         {
-            Context context = new Context();
+            StatePattern.Context context = new StatePattern.Context();
 
             StartState startState = new StartState();
             startState.DoAction(context);
@@ -501,6 +504,52 @@ namespace DesignPattern.UnitTests
             stopState.DoAction(context);
 
             Console.WriteLine(context.GetState().ToString());
+        }
+
+        /// <summary>
+        /// 空对象模式，如果找不到指定对象，则返回无效值的对象
+        /// </summary>
+        [TestMethod]
+        public void NullObjectPatternTest()
+        {
+            AbstractCustomer customer1 = CustomerFactory.GetCustomer("Rob");
+            AbstractCustomer customer2 = CustomerFactory.GetCustomer("Bob");
+            AbstractCustomer customer3 = CustomerFactory.GetCustomer("Julie");
+            AbstractCustomer customer4 = CustomerFactory.GetCustomer("Laura");
+
+            Console.WriteLine("Customers");
+            Console.WriteLine(customer1.GetName());
+            Console.WriteLine(customer2.GetName());
+            Console.WriteLine(customer3.GetName());
+            Console.WriteLine(customer4.GetName());
+        }
+        /// <summary>
+        /// 测试模式测试
+        /// </summary>
+        [TestMethod]
+        public void StrategyPatternTest()
+        {
+            StrategyPattern.Context context = new StrategyPattern.Context(new OperationAdd());
+            Console.WriteLine("10 + 5 = " + context.ExecuteStrategy(10, 5));
+
+            context = new StrategyPattern.Context(new OperationSubtract());
+            Console.WriteLine("10 - 5 = " + context.ExecuteStrategy(10, 5));
+
+            context = new StrategyPattern.Context(new OperationMultiply());
+            Console.WriteLine("10 * 5 = " + context.ExecuteStrategy(10, 5));
+        }
+
+        /// <summary>
+        /// 模板模式
+        /// </summary>
+        [TestMethod]
+        public void TemplatePatternTest()
+        {
+            Game game = new Cricket();
+            game.Play();
+            Console.WriteLine();
+            game = new Football();
+            game.Play();
         }
     }
 }
