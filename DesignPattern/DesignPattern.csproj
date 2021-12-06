@@ -74,6 +74,7 @@
     <Compile Include="StatePattern.cs" />
     <Compile Include="StrategyPattern.cs" />
     <Compile Include="TemplatePattern.cs" />
+    <Compile Include="VisitorPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

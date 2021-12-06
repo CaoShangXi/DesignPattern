@@ -20,6 +20,7 @@ using DesignPattern.SingletonPattern;
 using DesignPattern.StatePattern;
 using DesignPattern.StrategyPattern;
 using DesignPattern.TemplatePattern;
+using DesignPattern.VisitorPattern;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -550,6 +551,16 @@ namespace DesignPattern.UnitTests
             Console.WriteLine();
             game = new Football();
             game.Play();
+        }
+
+        /// <summary>
+        /// 访问者模式
+        /// </summary>
+        [TestMethod]
+        public void VisitorPatternTest()
+        {
+            IComputerPart computer = new Computer();
+            computer.Accept(new ComputerPartDisplayVisitor());
         }
     }
 }
