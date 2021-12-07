@@ -2,6 +2,7 @@
 using DesignPattern.AdapterPattern;
 using DesignPattern.Bridge;
 using DesignPattern.BuilderPattern;
+using DesignPattern.BusinessDelegatePattern;
 using DesignPattern.ChainPattern;
 using DesignPattern.CommandPattern;
 using DesignPattern.CompositePattern;
@@ -591,6 +592,22 @@ namespace DesignPattern.UnitTests
             student.SetName("Robert");
             student.SetRollNo("10");
             return student;
+        }
+
+        /// <summary>
+        /// 业务代表模式测试
+        /// </summary>
+        [TestMethod]
+        public void BusinessDelegatePatternTest()
+        {
+            BusinessDelegate businessDelegate = new BusinessDelegate();
+            businessDelegate.SetServiceType("EJB");
+
+            Client client = new Client(businessDelegate);
+            client.DoTask();
+
+            businessDelegate.SetServiceType("JMS");
+            client.DoTask();
         }
     }
 }
