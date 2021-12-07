@@ -12,6 +12,7 @@ using DesignPattern.InterpreterPattern;
 using DesignPattern.IteratorPattern;
 using DesignPattern.MediatorPattern;
 using DesignPattern.MenmetoPattern;
+using DesignPattern.MVCPattern;
 using DesignPattern.NullObjectPattern;
 using DesignPattern.ObserverPattern;
 using DesignPattern.PrototypePattern;
@@ -561,6 +562,35 @@ namespace DesignPattern.UnitTests
         {
             IComputerPart computer = new Computer();
             computer.Accept(new ComputerPartDisplayVisitor());
+        }
+
+        /// <summary>
+        /// MVC模式测试
+        /// </summary>
+        [TestMethod]
+        public void MVCPatternTest()
+        {
+            //从数据库获取学生记录
+            Student model = RetrieveStudentFromDatabase();
+
+            //创建一个视图：把学生详细信息输出到控制台
+            StudentView view = new StudentView();
+
+            StudentController controller = new StudentController(model, view);
+
+            controller.UpdateView();
+
+            //更新模型数据
+            controller.SetStudentName("John");
+
+            controller.UpdateView();
+        }
+        private static Student RetrieveStudentFromDatabase()
+        {
+            Student student = new Student();
+            student.SetName("Robert");
+            student.SetRollNo("10");
+            return student;
         }
     }
 }

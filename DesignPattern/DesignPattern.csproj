@@ -64,6 +64,7 @@
     <Compile Include="InterpreterPattern.cs" />
     <Compile Include="MediatorPattern.cs" />
     <Compile Include="MenmetoPattern.cs" />
+    <Compile Include="MVCPattern.cs" />
     <Compile Include="NullObjectPattern.cs" />
     <Compile Include="ObserverPattern.cs" />
     <Compile Include="Program.cs" />
