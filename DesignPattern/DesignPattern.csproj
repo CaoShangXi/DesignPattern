@@ -55,7 +55,9 @@
     <Compile Include="BusinessDelegatePattern.cs" />
     <Compile Include="ChainPattern.cs" />
     <Compile Include="CommandPattern.cs" />
+    <Compile Include="CompositeEntityPattern.cs" />
     <Compile Include="CompositePattern.cs" />
+    <Compile Include="DataAccessObjectPattern.cs" />
     <Compile Include="DecoratorPattern.cs" />
     <Compile Include="FacadePattern.cs" />
     <Compile Include="FactoryPattern.cs" />

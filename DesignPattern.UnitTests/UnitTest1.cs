@@ -6,6 +6,7 @@ using DesignPattern.BusinessDelegatePattern;
 using DesignPattern.ChainPattern;
 using DesignPattern.CommandPattern;
 using DesignPattern.CompositePattern;
+using DesignPattern.DataAccessObjectPattern;
 using DesignPattern.DecoratorPattern;
 using DesignPattern.FacadePattern;
 using DesignPattern.FilterPattern;
@@ -572,7 +573,7 @@ namespace DesignPattern.UnitTests
         public void MVCPatternTest()
         {
             //从数据库获取学生记录
-            Student model = RetrieveStudentFromDatabase();
+            MVCPattern.Student model = RetrieveStudentFromDatabase();
 
             //创建一个视图：把学生详细信息输出到控制台
             StudentView view = new StudentView();
@@ -586,9 +587,9 @@ namespace DesignPattern.UnitTests
 
             controller.UpdateView();
         }
-        private static Student RetrieveStudentFromDatabase()
+        private static MVCPattern.Student RetrieveStudentFromDatabase()
         {
-            Student student = new Student();
+            MVCPattern.Student student = new MVCPattern.Student();
             student.SetName("Robert");
             student.SetRollNo("10");
             return student;
@@ -608,6 +609,46 @@ namespace DesignPattern.UnitTests
 
             businessDelegate.SetServiceType("JMS");
             client.DoTask();
+        }
+
+        /// <summary>
+        /// 组合实体模式
+        /// </summary>
+        [TestMethod]
+        public void CompositeEntityPatternTest()
+        {
+            CompositeEntityPattern.Client client = new CompositeEntityPattern.Client();
+            client.SetData("Test", "Data");
+            client.PrintData();
+            client.SetData("Second Test", "Data1");
+            client.PrintData();
+        }
+
+        /// <summary>
+        /// 数据访问对象
+        /// </summary>
+        [TestMethod]
+        public void DataAccessObjectPatternTest()
+        {
+            IStudentDao studentDao = new StudentDaoImpl();
+
+            //输出所有的学生
+            foreach (DataAccessObjectPattern.Student stu in studentDao.GetAllStudents())
+            {
+                Console.WriteLine("Student: [RollNo : "
+                   + stu.GetRollNo() + ", Name : " + stu.GetName() + " ]");
+            }
+
+
+            //更新学生
+            DataAccessObjectPattern.Student student = studentDao.GetAllStudents()[0];
+            student.SetName("Michael");
+            studentDao.UpdateStudent(student);
+
+            //获取学生
+            studentDao.GetStudent(0);
+            Console.WriteLine("Student: [RollNo : "
+               + student.GetRollNo() + ", Name : " + student.GetName() + " ]");
         }
     }
 }
