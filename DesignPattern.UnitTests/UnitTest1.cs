@@ -10,6 +10,7 @@ using DesignPattern.DataAccessObjectPattern;
 using DesignPattern.DecoratorPattern;
 using DesignPattern.FacadePattern;
 using DesignPattern.FilterPattern;
+using DesignPattern.FrontControllerPattern;
 using DesignPattern.InterpreterPattern;
 using DesignPattern.IteratorPattern;
 using DesignPattern.MediatorPattern;
@@ -576,7 +577,7 @@ namespace DesignPattern.UnitTests
             MVCPattern.Student model = RetrieveStudentFromDatabase();
 
             //创建一个视图：把学生详细信息输出到控制台
-            StudentView view = new StudentView();
+            MVCPattern.StudentView view = new MVCPattern.StudentView();
 
             StudentController controller = new StudentController(model, view);
 
@@ -649,6 +650,17 @@ namespace DesignPattern.UnitTests
             studentDao.GetStudent(0);
             Console.WriteLine("Student: [RollNo : "
                + student.GetRollNo() + ", Name : " + student.GetName() + " ]");
+        }
+
+        /// <summary>
+        /// 前端控制器模式
+        /// </summary>
+        [TestMethod]
+        public void FrontControllerPatternTest()
+        {
+            FrontController frontController = new FrontController();
+            frontController.DispatchRequest("HOME");
+            frontController.DispatchRequest("STUDENT");
         }
     }
 }
