@@ -11,6 +11,7 @@ using DesignPattern.DecoratorPattern;
 using DesignPattern.FacadePattern;
 using DesignPattern.FilterPattern;
 using DesignPattern.FrontControllerPattern;
+using DesignPattern.InterceptingFilterPattern;
 using DesignPattern.InterpreterPattern;
 using DesignPattern.IteratorPattern;
 using DesignPattern.MediatorPattern;
@@ -605,7 +606,7 @@ namespace DesignPattern.UnitTests
             BusinessDelegate businessDelegate = new BusinessDelegate();
             businessDelegate.SetServiceType("EJB");
 
-            Client client = new Client(businessDelegate);
+            BusinessDelegatePattern.Client client = new BusinessDelegatePattern.Client(businessDelegate);
             client.DoTask();
 
             businessDelegate.SetServiceType("JMS");
@@ -661,6 +662,21 @@ namespace DesignPattern.UnitTests
             FrontController frontController = new FrontController();
             frontController.DispatchRequest("HOME");
             frontController.DispatchRequest("STUDENT");
+        }
+
+        /// <summary>
+        /// 拦截过滤器模式
+        /// </summary>
+        [TestMethod]
+        public void InterceptionFilterPatternTest()
+        {
+            FilterManager filterManager = new FilterManager(new Target());
+            filterManager.SetFilter(new AuthenticationFilter());
+            filterManager.SetFilter(new DebugFilter());
+
+            InterceptingFilterPattern.Client client = new InterceptingFilterPattern.Client();
+            client.SetFilterManager(filterManager);
+            client.SendRequest("HOME");
         }
     }
 }
